@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginPUserInfo">
+
+        <TextView
+            android:id="@+id/reportshopTitle"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/white_coner"
+            android:elevation="14dp"
+            android:gravity="center"
+            android:text="회원 가입"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/signCompleteBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="418dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/lightgray"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:textStyle="bold"
+            android:text="닉네임은"
+            android:textSize="14dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/nicknameIs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="입니다."
+            android:textSize="14dp"
+
+            tools:ignore="MissingConstraints,TextSizeCheck"
+            tools:layout_editor_absoluteX="317dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+        <EditText
+            android:id="@+id/userNickname"
+            android:layout_width="294dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:hint="닉네임을 입력해주세요"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:textSize="15dp"
+            android:textColorHint="#A3A3A3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nickname"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/birth"
+            android:layout_width="413dp"
+            android:layout_height="74dp"
+            android:background="@drawable/lightgray"
+            android:paddingLeft="20dp"
+            android:paddingTop="22dp"
+            android:text="생년월일은"
+            android:textSize="14dp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userNickname"
+            app:layout_constraintVertical_bias="0.122"
+            tools:ignore="TextSizeCheck" />
+
+        <android.widget.Button
+            android:id="@+id/selectDateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="날짜고르기"
+            android:textColor="#DF793E"
+            android:textColorLink="#FF9800"
+            android:textSize="12.5dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/birth"
+            app:layout_constraintEnd_toEndOf="@+id/birth"
+            app:layout_constraintHorizontal_bias="0.993"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/birth"
+            app:layout_constraintVertical_bias="0.384"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/showDate"
+            android:layout_width="153dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="입력된 생일"
+            android:textColorHint="#787878"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birth"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/brithIs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="입니다."
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/showDate"
+            app:layout_constraintTop_toBottomOf="@+id/selectDateBtn" />
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="408dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/lightgray"
+            android:paddingLeft="20dp"
+            android:paddingTop="18dp"
+            android:text="성별은"
+            android:textSize="14dp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showDate"
+            app:layout_constraintVertical_bias="0.094"
+            tools:ignore="TextSizeCheck" />
+
+        <RadioGroup
+            android:id="@+id/sexGroup"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.738"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sex"
+            app:layout_constraintVertical_bias="0.605">
+
+            <RadioButton
+                android:id="@+id/sexM"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:text="남자 🧑"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck"
+                tools:layout_editor_absoluteX="52dp"
+                tools:layout_editor_absoluteY="432dp" />
+
+            <RadioButton
+                android:id="@+id/sexF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="여자 👩‍"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/profileImagesetting"
+            android:layout_width="107dp"
+            android:layout_height="107dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border_rounded_coner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sexGroup" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="프로필 사진\n등록하기"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/profileImagesetting"
+            app:layout_constraintEnd_toEndOf="@id/profileImagesetting"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="@id/profileImagesetting"
+            app:layout_constraintTop_toTopOf="@id/profileImagesetting"
+            app:layout_constraintVertical_bias="0.54" />
+
+        <android.widget.Button
+            android:id="@+id/signCompleteBtn"
+            android:layout_width="112dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/register_btn"
+            android:text="회원가입"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            app:iconTint="#DF793E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImagesetting"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextSizeCheck" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

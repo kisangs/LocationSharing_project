@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#ffffff"
+    android:outlineAmbientShadowColor="#ffffff"
+    android:outlineSpotShadowColor="#ffffff">
+
+    <!--    drawable -toast-shape로 모양 잡음-->
+    <TextView
+        android:id="@+id/textboard"
+        android:layout_width="334dp"
+        android:layout_height="68dp"
+        android:background="@drawable/toast_shape"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="20dp"
+        android:text="✨✨가게 정보가 업로드 중입니다✨✨"
+        android:textColor="#800000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--    tools:context=".ReportShop-->
+
+    <TextView
+        android:id="@+id/user_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/white_coner"
+        android:elevation="14dp"
+        android:gravity="center"
+        android:text="가게 정보 수정"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <!--        />-->
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/reportBtn"
+        tools:ignore="MissingConstraints,NotSibling"
+        tools:layout_editor_absoluteX="-152dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- 가게 위치 선택 부분 -->
+
+
+            <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="408dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="40dp"
+                android:text="📌  카테고리"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.011"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+                tools:ignore="TextSizeCheck" />
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="377dp"
+                android:layout_height="45dp"
+                android:background="@drawable/spinner_border"
+                android:gravity="end"
+                android:paddingLeft="43dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCategory"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="376dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="4dp"
+                android:hint="ex))  영희네  or  별빛아파트 앞"
+                android:inputType="text"
+                android:paddingLeft="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/pwayAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="계좌이체"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toEndOf="@+id/pwayMobile"
+                app:layout_constraintTop_toBottomOf="@+id/pwayCash" />
+
+            <TextView
+                android:id="@+id/paywayIs"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="36dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="40dp"
+                android:text="📌  결제 방식 (중복가능)"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categorySpinner"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/pwayMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:buttonTint="#dbdada"
+                android:text="모바일"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.206"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pwayCard" />
+
+            <CheckBox
+                android:id="@+id/pwayCard"
+                android:layout_width="68dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:buttonTint="#dbdada"
+                android:text="카드"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.204"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paywayIs" />
+
+            <CheckBox
+                android:id="@+id/pwayCash"
+                android:layout_width="68dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:buttonTint="#dbdada"
+                android:text="현금"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toEndOf="@+id/pwayCard"
+                app:layout_constraintTop_toBottomOf="@+id/paywayIs" />
+
+
+            <TextView
+                android:id="@+id/dayIs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="40dp"
+                android:text="📌  출몰 시기"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pwayMobile"
+                tools:ignore="TextSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/Fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="금"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/thu"
+                app:layout_constraintTop_toBottomOf="@+id/dayIs" />
+
+            <CheckBox
+                android:id="@+id/tue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="화"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/mon"
+                app:layout_constraintTop_toBottomOf="@+id/dayIs" />
+
+            <CheckBox
+                android:id="@+id/wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="수"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tue"
+                app:layout_constraintTop_toBottomOf="@+id/dayIs" />
+
+            <CheckBox
+                android:id="@+id/thu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="목"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintStart_toEndOf="@+id/wed"
+                app:layout_constraintTop_toBottomOf="@+id/dayIs" />
+
+            <CheckBox
+                android:id="@+id/sun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="일"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/sat"
+                app:layout_constraintTop_toBottomOf="@+id/dayIs" />
+
+            <CheckBox
+                android:id="@+id/sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="토"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/Fri"
+                app:layout_constraintTop_toBottomOf="@+id/dayIs" />
+
+            <CheckBox
+                android:id="@+id/mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#dbdada"
+                android:text="월"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayIs" />
+
+
+            <ImageView
+                android:id="@+id/storeExteriorPhoto"
+                android:layout_width="195dp"
+                android:layout_height="111dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_rounded_coner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mon" />
+
+            <TextView
+                android:id="@+id/storeBoardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="가게사진 등록\n📷"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@id/storeExteriorPhoto"
+                app:layout_constraintEnd_toEndOf="@id/storeExteriorPhoto"
+                app:layout_constraintStart_toStartOf="@id/storeExteriorPhoto"
+                app:layout_constraintTop_toTopOf="@id/storeExteriorPhoto" />
+
+
+            <android.widget.Button
+                android:id="@+id/reportBtn"
+                android:layout_width="88dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/register_btn"
+                android:text="등록"
+                android:textColor="#ffffff"
+                android:textSize="11dp"
+                app:iconTint="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/storeExteriorPhoto"
+                tools:ignore="TextContrastCheck,TextSizeCheck,TouchTargetSizeCheck" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
